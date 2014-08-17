@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add	57.cpp	/^void Add(int a[],int b[])$/;"	f
+Back	43.cpp	/^void Back(int p[],int a[],int has)$/;"	f
+C	53.cpp	/^int C(int n,int r)$/;"	f
+Can	38.cpp	/^int Can(int num)$/;"	f
+Com	45.cpp	/^int Com(int a[],int b[],int len)$/;"	f
+Con	27.cpp	/^int Con(int a,int b)$/;"	f
+Con	37.cpp	/^void Con(int p[],int m)$/;"	f
+Con	41.cpp	/^int Con(int p[],int a[],int deep,int m)$/;"	f
+Con	50.cpp	/^void Con(int p[],int sum,int x,int y)$/;"	f
+Con4	47.cpp	/^int Con4(int m,int n)$/;"	f
+Eva	55 palin number.cpp	/^int Eva(int a[],int b)$/;"	f
+Eva	55_palin_number.cpp	/^int Eva(int a[],int b)$/;"	f
+Five	43.cpp	/^void Five(int p[],int a[])$/;"	f
+For	43.cpp	/^void For(int p[],int a[],int has)$/;"	f
+For	44.cpp	/^int For (int p[],int m,int n)$/;"	f
+Judge	49.cpp	/^int Judge(int x,int y,int z)$/;"	f
+Len	63.cpp	/^int Len(int x,int y)$/;"	f
+MAXSIZE	243.c	2;"	d	file:
+Mul	38.cpp	/^void Mul(int k)$/;"	f
+Mul	56.cpp	/^int Mul(int a[],int m,int n)$/;"	f
+Mul	97.cpp	/^int Mul(int a[],int m)$/;"	f
+Odd	145.cpp	/^void Odd(int n)$/;"	f
+Pn	44.cpp	/^int Pn(int p[],int n)$/;"	f
+PrimeGenerator	CombineMath.py	/^class PrimeGenerator:$/;"	c
+Print	45.cpp	/^void Print(int a[],int len)$/;"	f
+Print	56.cpp	/^void Print(int a[],int m,int n,int x)$/;"	f
+Print	97.cpp	/^void Print(int a[],int m,int n)$/;"	f
+QSort	22.cpp	/^int QSort(int low,int high)$/;"	f
+Sort	22.cpp	/^void Sort(int low,int high)$/;"	f
+Squ	92.cpp	/^int Squ(int n)$/;"	f
+__init__	CombineMath.py	/^    def __init__(self):$/;"	m	class:PrimeGenerator
+a	243.c	/^int a[MAXSIZE];$/;"	v
+a	35.cpp	/^int a[1000024]={0};$/;"	v
+a	46.cpp	/^int a[10004]={0};$/;"	v
+a	47.cpp	/^int a[1000024]={0};$/;"	v
+a	50.cpp	/^int a[1000024]={0};$/;"	v
+acc	57.cpp	/^int acc;$/;"	v
+add	45.cpp	/^int add(int a[],int b,int len)$/;"	f
+bouncy	112.cpp	/^int bouncy(int x)$/;"	f
+brute_force	243_resilience.py	/^def brute_force():$/;"	f
+ch	22.cpp	/^    char ch[10];int cou;$/;"	m	struct:node	file:
+cou	22.cpp	/^    char ch[10];int cou;$/;"	m	struct:node	file:
+di	22.cpp	/^ph di[8001];$/;"	v
+dou	55 palin number.cpp	/^int dou(int a[],int len)$/;"	f
+dou	55_palin_number.cpp	/^int dou(int a[],int len)$/;"	f
+factor	243_resilience.py	/^def factor(n):$/;"	f
+factor	CombineMath.py	/^    def factor(n):$/;"	m	class:PrimeGenerator
+generate	CombineMath.py	/^    def generate(self):$/;"	m	class:PrimeGenerator
+generateLarger	CombineMath.py	/^    def generateLarger(self, n):$/;"	m	class:PrimeGenerator
+generateLess	CombineMath.py	/^    def generateLess(self, n):$/;"	m	class:PrimeGenerator
+generateNList	CombineMath.py	/^    def generateNList(self, n):$/;"	m	class:PrimeGenerator
+getCurList	CombineMath.py	/^    def getCurList(self):$/;"	m	class:PrimeGenerator
+getLastPrime	CombineMath.py	/^    def getLastPrime(self):$/;"	m	class:PrimeGenerator
+getNth	CombineMath.py	/^    def getNth(self, n):$/;"	m	class:PrimeGenerator
+inf	102.cpp	/^int inf(int a[])$/;"	f
+init	52 1-6倍相同数字.cpp	/^int init(int x,int a[])$/;"	f
+init	52_1-6倍相同数字.cpp	/^int init(int x,int a[])$/;"	f
+isfirst	79.cpp	/^int isfirst(char a[][5],int flag[],int x,int y,int k)$/;"	f
+ln	57.cpp	/^int ln;$/;"	v
+m	53.cpp	/^int m[50];$/;"	v
+main	102.cpp	/^int main()$/;"	f
+main	112.cpp	/^int main()$/;"	f
+main	145.cpp	/^int main()$/;"	f
+main	179.cpp	/^int main()$/;"	f
+main	187.cpp	/^int main()$/;"	f
+main	206.cpp	/^int main()$/;"	f
+main	22.cpp	/^int main()$/;"	f
+main	243.c	/^int main()$/;"	f
+main	243_resilience.py	/^def main():$/;"	f
+main	27.cpp	/^int main()$/;"	f
+main	33.cpp	/^int main()$/;"	f
+main	35.cpp	/^int main()$/;"	f
+main	36.cpp	/^int main()$/;"	f
+main	37.cpp	/^int main()$/;"	f
+main	38.cpp	/^int main()$/;"	f
+main	39.cpp	/^int main()$/;"	f
+main	41.cpp	/^int main()$/;"	f
+main	42.cpp	/^int main()$/;"	f
+main	43.cpp	/^int main()$/;"	f
+main	44.cpp	/^int main()$/;"	f
+main	45.cpp	/^int main()$/;"	f
+main	46.cpp	/^int main()$/;"	f
+main	47.cpp	/^int main()$/;"	f
+main	49.cpp	/^int main()$/;"	f
+main	50.cpp	/^int main()$/;"	f
+main	52 1-6倍相同数字.cpp	/^int main()$/;"	f
+main	52_1-6倍相同数字.cpp	/^int main()$/;"	f
+main	53.cpp	/^int main()$/;"	f
+main	55 palin number.cpp	/^int main()$/;"	f
+main	55_palin_number.cpp	/^int main()$/;"	f
+main	56.cpp	/^int main()$/;"	f
+main	57.cpp	/^int main()$/;"	f
+main	58.cpp	/^int  main()$/;"	f
+main	59.cpp	/^int main()$/;"	f
+main	63.cpp	/^int main()$/;"	f
+main	69.cpp	/^int main()$/;"	f
+main	71.cpp	/^int main()$/;"	f
+main	79.cpp	/^int main()$/;"	f
+main	81.cpp	/^int main()$/;"	f
+main	92.cpp	/^int main()$/;"	f
+main	97.cpp	/^int main()$/;"	f
+main	99.cpp	/^int main()$/;"	f
+max	50.cpp	/^int max;$/;"	v
+max	56.cpp	/^int max;$/;"	v
+move	50.cpp	/^long move;$/;"	v
+mul	97.cpp	/^void mul(int a[])$/;"	f
+nine	38.cpp	/^int nine[9];$/;"	v
+node	22.cpp	/^typedef struct node$/;"	s	file:
+p10	36.cpp	/^int p10[6],p2[22];$/;"	v
+p2	36.cpp	/^int p10[6],p2[22];$/;"	v
+pal	55 palin number.cpp	/^int pal(int a[],int len)$/;"	f
+pal	55_palin_number.cpp	/^int pal(int a[],int len)$/;"	f
+palin	36.cpp	/^int palin(int p[],int m)$/;"	f
+ph	22.cpp	/^}ph;$/;"	t	typeref:struct:node	file:
+pos	50.cpp	/^int pos;$/;"	v
+pri	37.cpp	/^int pri[6]={1,2,3,5,7,9};	$/;"	v
+pri	46.cpp	/^int pri(int m)$/;"	f
+pri	58.cpp	/^int pri(int n)$/;"	f
+pri	69.cpp	/^int pri[1000004]={0};$/;"	v
+prime	179.cpp	/^int prime[10000];$/;"	v
+prime	27.cpp	/^int prime(int t)$/;"	f
+prime	41.cpp	/^int prime(int a[],int m)$/;"	f
+prime	43.cpp	/^int prime[7]={2,3,5,7,11,13,17};$/;"	v
+primeGener	243_resilience.py	/^primeGener = PrimeGenerator()$/;"	v
+print	43.cpp	/^void print(int p[],int a[])$/;"	f
+print	55 palin number.cpp	/^void print(int a[],int len)$/;"	f
+print	55_palin_number.cpp	/^void print(int a[],int len)$/;"	f
+print	57.cpp	/^void print(int a[],int b[])$/;"	f
+process	243_resilience.py	/^def process():$/;"	f
+product	243_resilience.py	/^def product(num_list):$/;"	f
+resilient	243_resilience.py	/^def resilient(n, res_num):$/;"	f
+same	179.cpp	/^int same(int prim[],int x,int k)$/;"	f
+same	52 1-6倍相同数字.cpp	/^int same(int x,int a[])$/;"	f
+same	52_1-6倍相同数字.cpp	/^int same(int x,int a[])$/;"	f
+sum	145.cpp	/^long sum;$/;"	v
+sum	43.cpp	/^int sum[10];$/;"	v
+swap	22.cpp	/^void swap(int a,int b)$/;"	f
+t	41.cpp	/^int t;$/;"	v
+ten	36.cpp	/^int ten(int x,int p[])$/;"	f
+tester	CombineMath.py	/^    tester = PrimeGenerator()$/;"	v	class:PrimeGenerator
+trun	37.cpp	/^int trun(int a[],int m,int flag)$/;"	f
+two	36.cpp	/^int two(int x,int p[])$/;"	f
+z	37.cpp	/^int z;$/;"	v
