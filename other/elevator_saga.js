@@ -1,23 +1,23 @@
 {
     init: function(elevators, floors) {
-        function addWaitFloor(floor, elevator, direction) {
-                var floorNum = floor.floorNum();
-                for (var j in elevators) {
+        function addWaitFloor(floor, elevators, direction) {
 
-                    var elevator = elevators[j];
-                    if (elevator.destinationDirection == direction || elevator.destinationDirection == 'stop') {
-                        elevator.destinationQueue.push(floorNum);
-                    }
+            var floorNum = floor.floorNum();
+            //console.log(direction + ' ' + floorNum)
+            
+            _.forEach(elevators, function(elevator, index) {
+                //console.log(index + ' ' + elevator.destinationDirection());
+                if (elevator.destinationDirection() == direction || elevator.destinationDirection() == 'stopped') {
+                    elevator.destinationQueue.push(floorNum);
+                    //console.log(index + ' ' + elevator.destinationQueue);
+                    //console.log(index + ' ' + floorNum);
                 }
-            }
-        var elevator = elevators[0]; // Let's use the first elevator
+            });
+        };
         
-        for (var i in elevators) {
-            
-            var elevator = elevators[i];
-            // Whenever the elevator is idle (has no more queued destinations) ...
+        _.forEach(elevators, function(elevator) {
             elevator.destinationQueue = [];
-            
+
             elevator.on("idle", function() {
                 // let's go to all the floors (or did we forget one?)
                 if(elevator.getPressedFloors().length > 0) {
@@ -26,7 +26,7 @@
                 else {
                     elevator.goToFloor(0);
                 }
-                
+
             });
 
             elevator.on("floor_button_pressed", function(floorNum) {
@@ -34,23 +34,23 @@
                 if(elevator.getPressedFloors().length == 1) {
                     elevator.checkDestinationQueue();
                 }
-                
+
             });
-        }
+        });
         
-        for (var i in floors) {
-            var floor = floors[i];
-            
+        _.forEach(floors, function(floor) {
             floor.on("up_button_pressed", function() {
+                //var floorNum = floor.floorNum();
+                //console.log('up ' + floorNum)
                 addWaitFloor(floor, elevators, 'up');
             })
-            
+
             floor.on("down_button_pressed", function() {
-                // Maybe tell an elevator to go to this floor?
+                //var floorNum = floor.floorNum();
+                //console.log('down ' + floorNum)
                 addWaitFloor(floor, elevators, 'down');
             })
-        }
-                                                                
+        });
     },
     update: function(dt, elevators, floors) {
         // We normally don't need to do anything here
