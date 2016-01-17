@@ -1,5 +1,6 @@
 {
     init: function(elevators, floors) {
+        
         function inqueue(queue, num) {
 
             for (var i in queue)
@@ -8,33 +9,44 @@
             queue.push(num);
             
         }
+        
         function addWaitFloor(floor, elevators, direction) {
-            var flag = false;
+           
             var floorNum = floor.floorNum();
             //console.log(direction + ' ' + floorNum)
             
-            _.forEach(elevators, function(elevator, index) {
-                //console.log(index + ' ' + elevator.destinationDirection());
+            var flag = false;
+            
+            for (var i in elevators) {
+                
+                var elevator = elevators[i];
                 if (elevator.destinationDirection() == direction || elevator.destinationDirection() == 'stopped') {
                     inqueue(elevator.destinationQueue, floorNum);
+                    //console.log(i + ' ' + elevators[i].destinationDirection());
+                    flag = true;
+                    break;
                     //console.log(index + ' ' + elevator.destinationQueue);
                     //console.log(index + ' ' + floorNum);
                 }
-            });
+            }
             
-            if (flag == true) {
-                var elevator = elevator[0];
+            /*if (flag == false) {
+                var elevator = elevators[0];
 
                 elevator.on("passing_floor", function(floorNum, direction) {
-                    elevator.stop();
-                    inqueue(elevator.destinationQueue, floorNum);
-                    elevator.checkDestinationQueue();
+                    if (elevator.destinationDirection() == direction) {
+                        elevator.stop();
+                        inqueue(elevator.destinationQueue, floorNum);
+                        console.log('0 from ' + elevator.currentFloor() + ' go to ' + elevator.destinationQueue);
+                        elevator.checkDestinationQueue();
+                    }
+                    
                 });
-            }
+            }*/
             
         };
         
-        _.forEach(elevators, function(elevator) {
+        _.forEach(elevators, function(elevator, index) {
             elevator.destinationQueue = [];
 
             elevator.on("idle", function() {
@@ -50,7 +62,9 @@
 
             elevator.on("floor_button_pressed", function(floorNum) {
                 inqueue(elevator.destinationQueue, floorNum);
-                if(elevator.getPressedFloors().length == 1) {
+                //console.log(index + ' ' + elevator.destinationQueue);
+                if(elevator.getPressedFloors().length > 0) {
+                    //console.log(index + ' from ' + elevator.currentFloor() + ' go to ' + elevator.destinationQueue[0]);
                     elevator.checkDestinationQueue();
                 }
 
