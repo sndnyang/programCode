@@ -1,18 +1,37 @@
 {
     init: function(elevators, floors) {
-        function addWaitFloor(floor, elevators, direction) {
+        function inqueue(queue, num) {
 
+            for (var i in queue)
+                if (queue[i] == num)
+                    return;
+            queue.push(num);
+            
+        }
+        function addWaitFloor(floor, elevators, direction) {
+            var flag = false;
             var floorNum = floor.floorNum();
             //console.log(direction + ' ' + floorNum)
             
             _.forEach(elevators, function(elevator, index) {
                 //console.log(index + ' ' + elevator.destinationDirection());
                 if (elevator.destinationDirection() == direction || elevator.destinationDirection() == 'stopped') {
-                    elevator.destinationQueue.push(floorNum);
+                    inqueue(elevator.destinationQueue, floorNum);
                     //console.log(index + ' ' + elevator.destinationQueue);
                     //console.log(index + ' ' + floorNum);
                 }
             });
+            
+            if (flag == true) {
+                var elevator = elevator[0];
+
+                elevator.on("passing_floor", function(floorNum, direction) {
+                    elevator.stop();
+                    inqueue(elevator.destinationQueue, floorNum);
+                    elevator.checkDestinationQueue();
+                });
+            }
+            
         };
         
         _.forEach(elevators, function(elevator) {
@@ -30,7 +49,7 @@
             });
 
             elevator.on("floor_button_pressed", function(floorNum) {
-                elevator.destinationQueue.push(floorNum);
+                inqueue(elevator.destinationQueue, floorNum);
                 if(elevator.getPressedFloors().length == 1) {
                     elevator.checkDestinationQueue();
                 }
