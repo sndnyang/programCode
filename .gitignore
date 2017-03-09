@@ -2,3 +2,9 @@
 *~
 *.o
 *.pyc
+a.out
+.*swp
+*.zip
+*.png
+*.jpg
+*.p
